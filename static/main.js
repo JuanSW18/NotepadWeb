@@ -1,7 +1,10 @@
-$(document).ready(function() {
+$(function() {
     initNavBar();
     $('#btnCloseModalNote').on('click', function(){
         cleanModalAddNote();
+    });
+    $( "#btnModalNote").on('click', function(){
+        saveNoteForm();
     });
 });
 
@@ -239,9 +242,10 @@ function saveNoteForm() {
         'content': content,
         'tags': tag_list
     };
-    console.log(data);
+
     addNote(data).done(response => {
         drawNotes(response);
+        cleanModalAddNote();
         $( () => {
             $('#modalAddNote').modal('hide');
         });
