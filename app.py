@@ -50,7 +50,8 @@ def add_note():
         today = datetime.now()
         created_date = today.strftime("%d/%m/%Y %H:%M")
         note = Note(identifier=note_identifier, title=request.form.get("title"),
-                    content=request.form.get("content"), created_date=created_date)
+                    content=request.form.get("content"), created_date=created_date,
+                    related_tags=request.form.getlist("tags[]"))
         section.notes.append(note)
         section.save()
         return jsonify(section), 201

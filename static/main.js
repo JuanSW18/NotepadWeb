@@ -226,15 +226,20 @@ function saveNoteForm() {
     const section_id = sessionStorage.getItem('current_section_id');
     const title = $('#note_title').val();
     const content = $('#note_content').val();
-    const tags = $('#note-tags-edited');
+    const common_name = 'note-tags-edited' + section_id + + '[]';
+    const tag_list_element = $('[name=\"'+ common_name +'\"]');
+    let tag_list = [];
+    for (let i = 0; i < tag_list_element.length; i++){
+        tag_list.push(tag_list_element[i].value);
+    }
 
     const data = {
         'section_id': section_id,
         'title': title,
         'content': content,
-        'tags': tags
+        'tags': tag_list
     };
-
+    console.log(data);
     addNote(data).done(response => {
         drawNotes(response);
         $( () => {
