@@ -7,6 +7,7 @@ instance/*
 !instance/.gitignore
 .webassets-cache
 .env
+envMyNotepad/
 
 ### Flask.Python Stack ###
 # Byte-compiled / optimized / DLL files
@@ -16,6 +17,9 @@ __pycache__/
 
 # C extensions
 *.so
+
+# Config Files
+myNotepad.conf
 
 # Distribution / packaging
 .Python

@@ -3,7 +3,7 @@ Bloc de notas centralizado con almacenamiento en base de datos.
 
 ## Requisitos previos
 1. Python 3.6
-2. [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html)
+2. [virtualenv](https://virtualenv.pypa.io/en/latest/installation.html#via-pip)
 3. MongoDB 4.4.2
 
 
@@ -26,22 +26,10 @@ Bloc de notas centralizado con almacenamiento en base de datos.
     ```bash
     git clone https://github.com/JuanSW18/NotepadWeb.git
     ```
-2. Ubicate por linea de comandos en la carpeta del proyecto.
-    ```bash
-    cd NotepadWeb
-    ```
-3. Crea un entorno virtual. *Este comando solo funcionará si tienes instalado [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html).*
-    ```bash
-    mkvirtualenv <mi_entorno>
-    ```
-4. Instala las librerías del proyecto.
-    ```bash
-    pip install -r requirements.txt
-    ```
-5. Ejecuta la aplicación. **Antes de ejecutar este paso revisa la siguiente sección.**
-    ```bash
-    python app.py
-    ```
+2. Ejecuta el archivo **install**.
+3. Luego que termine la instalación ejecuta el archivo **runMyNotepad**.  Antes de ejecutar este paso revisa la siguiente sección (**Configurar conexión de base de datos**).
+4. Abre el navegador y entra a **localhost:5000**.
+5. [Opcional] Puedes copiar el archivo **runMyNotepad - External** en tu escritorio y ejecutarlo para configurar un **acceso directo**.
 
 ## Configurar conexión de base de datos
 Edita el archivo **config.py** que se encuentra dentro de la carpeta **NotepadWeb** y coloca las configuraciones de tu base de datos Mongo.
