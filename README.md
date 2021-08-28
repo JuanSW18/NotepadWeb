@@ -3,7 +3,7 @@ Bloc de notas centralizado con almacenamiento en base de datos.
 
 ## Requisitos previos
 1. Python 3.6
-2. [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html)
+2. [virtualenv](https://virtualenv.pypa.io/en/latest/installation.html#via-pip)
 3. MongoDB 4.4.2
 
 
